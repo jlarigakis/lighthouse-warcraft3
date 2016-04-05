@@ -1,11 +1,15 @@
 require_relative 'footman'
 require_relative 'peasant'
 class Barracks
-
-  attr_reader :gold, :food
+  attr_reader :gold, :food, :health_points
   def initialize
+    @health_points = 500
     @gold = 1000
     @food = 80
+  end
+
+  def damage(ap)
+    @health_points -= (ap.to_f / 2).ceil
   end
 
   def train(unit)
