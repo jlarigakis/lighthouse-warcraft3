@@ -14,9 +14,9 @@ class Unit
     @attack_power = ap
   end
 
-  def attack!(enemy)
+  def attack!(enemy, dmg=attack_power)
     return nil if dead? or enemy.dead?
-    enemy.damage(attack_power)
+    enemy.damage(dmg)
   end
 
   def damage(points)

@@ -9,8 +9,12 @@ class Barracks
     @lumber = 500
   end
 
+  def dead?
+    @health_points < 0
+  end
+
   def damage(ap)
-    @health_points -= (ap.to_f / 2).ceil
+    @health_points -= ap
   end
 
   def train(unit)
