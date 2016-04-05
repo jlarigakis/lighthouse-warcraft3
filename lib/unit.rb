@@ -15,6 +15,7 @@ class Unit
   end
 
   def attack!(enemy)
+    return nil if dead? or enemy.dead?
     enemy.damage(attack_power)
   end
 
