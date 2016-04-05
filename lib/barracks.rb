@@ -1,11 +1,12 @@
 require_relative 'footman'
 require_relative 'peasant'
 class Barracks
-  attr_reader :gold, :food, :health_points
+  attr_reader :gold, :food, :lumber, :health_points 
   def initialize
     @health_points = 500
     @gold = 1000
     @food = 80
+    @lumber = 500
   end
 
   def damage(ap)
